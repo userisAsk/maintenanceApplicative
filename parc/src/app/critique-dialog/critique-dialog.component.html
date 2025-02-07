@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Votre critique</h2>
+<mat-dialog-content>
+  <form (ngSubmit)="submitCritique()">
+    <mat-form-field>
+      <mat-label>Nom (optionnel)</mat-label>
+      <input matInput [(ngModel)]="newCritique.nom" name="nom">
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Prénom (optionnel)</mat-label>
+      <input matInput [(ngModel)]="newCritique.prenom" name="prenom">
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Note</mat-label>
+      <mat-select [(ngModel)]="newCritique.note" name="note" required>
+        <mat-option *ngFor="let n of [1,2,3,4,5]" [value]="n">{{n}} / 5</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Votre critique</mat-label>
+      <textarea matInput [(ngModel)]="newCritique.texte" name="texte" required></textarea>
+    </mat-form-field>
+    
+    <div mat-dialog-actions>
+      <button mat-button (click)="dialogRef.close()">Annuler</button>
+      <button mat-raised-button color="primary" type="submit">Envoyer</button>
+    </div>
+  </form>
+</mat-dialog-content>

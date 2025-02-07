@@ -1,0 +1,31 @@
+<ng-container *ngFor="let attraction of attractions | async">
+  <mat-card class="attraction-card">
+    <mat-card-header>
+      <mat-card-title>{{ attraction.nom }}</mat-card-title>
+      <mat-card-subtitle>Difficulté: {{ attraction.difficulte }} / 5</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ attraction.description }}</p>
+      
+      <button 
+        mat-icon-button 
+        color="primary" 
+        (click)="openCritiqueDialog(attraction)"
+        aria-label="Ajouter une critique"
+      >
+        <mat-icon>add_comment</mat-icon>
+      </button>
+
+      <div class="critiques">
+        <h3>Critiques :</h3>
+        <ng-container *ngFor="let critique of getCritiques(attraction.attraction_id!) | async">
+          <div class="critique-item">
+            <strong>{{ critique.nom || 'Anonyme' }}</strong> :
+            <span>{{ critique.note }} / 5</span>
+            <p>{{ critique.texte }}</p>
+          </div>
+        </ng-container>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</ng-container>

@@ -1,0 +1,13 @@
+{
+  "ATTRACTIONS": {
+    "DIFFICULTY": "Difficulté: {{ value }} / 5",
+    "REVIEWS": "Critiques :",
+    "ADD_REVIEW": "Ajouter une critique",
+    "ANONYMOUS": "Anonyme"
+  },
+  "BUTTONS": {
+    "DISCONNECT": "Déconnexion",
+    "SAVE": "Enregistrer",
+    "CANCEL": "Annuler"
+  }
+}
