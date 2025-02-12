@@ -20,5 +20,9 @@
   "CONFIRM_PASSWORD": "Confirm password",
   "EMAIL": "Email",
   "WELCOME_MESSAGE": "Welcome, {{name}}!",
-  "ERROR_MESSAGE": "An error occurred. Please try again."
+  "ERROR_MESSAGE": "An error occurred. Please try again.",
+  "NAME": "Name (optional)",
+  "FIRST_NAME": "First Name (optional)",
+  "RATING": "Rating"
+
 }

@@ -20,5 +20,8 @@
   "CONFIRM_PASSWORD": "Confirmer le mot de passe",
   "EMAIL": "Email",
   "WELCOME_MESSAGE": "Bienvenue, {{name}} !",
-  "ERROR_MESSAGE": "Une erreur est survenue. Veuillez réessayer."
+  "ERROR_MESSAGE": "Une erreur est survenue. Veuillez réessayer.",
+  "NAME": "Nom (optionnel)",
+  "FIRST_NAME": "Prenom(optionnel)",
+  "RATING": "Note"
 }

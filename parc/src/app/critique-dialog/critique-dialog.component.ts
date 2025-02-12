@@ -9,6 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { CritiqueService } from '../Service/critique.service';
 import { CritiqueInterface } from '../Interface/critique.interface';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-critique-dialog',
@@ -20,7 +21,8 @@ import { CritiqueInterface } from '../Interface/critique.interface';
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    TranslateModule
   ],
   templateUrl: './critique-dialog.component.html',
 })
