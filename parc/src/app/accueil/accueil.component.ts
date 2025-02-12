@@ -21,6 +21,7 @@ import { CritiqueInterface } from '../Interface/critique.interface';
 
 // Dialog Component
 import { CritiqueDialogComponent } from '../critique-dialog/critique-dialog.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-accueil',
@@ -33,7 +34,8 @@ import { CritiqueDialogComponent } from '../critique-dialog/critique-dialog.comp
     MatSelectModule,
     MatButtonModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    TranslateModule
   ],
   templateUrl: './accueil.component.html',
   styleUrl: './accueil.component.scss'

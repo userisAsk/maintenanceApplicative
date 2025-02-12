@@ -17,3 +17,16 @@ CREATE TABLE users (
     name varchar(255) not null,
     password varchar(255) not null
 );
+
+DROP TABLE IF EXISTS Critique;
+
+
+CREATE TABLE Critique (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   attraction_id INT NOT NULL,
+   nom VARCHAR(100),
+   prenom VARCHAR(100), 
+   note INT NOT NULL CHECK (note >= 0 AND note <= 5),
+   texte TEXT NOT NULL,
+   FOREIGN KEY (attraction_id) REFERENCES attraction(attraction_id) ON DELETE CASCADE
+);

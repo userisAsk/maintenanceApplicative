@@ -1,7 +1,13 @@
 <mat-toolbar>
-  <span><a routerLink="/accueil">Parc d'attraction</a></span>
+  <span><a routerLink="/accueil">{{ 'WELCOME' | translate }}</a></span>
   <div *ngIf="authService.isLoggedIn">
-    <button mat-stroked-button (click)="logout()">Déconnexion</button>
+    <button mat-stroked-button (click)="logout()">{{ 'LOGOUT' | translate }}</button>
+  </div>
+  <div>
+    <button (click)="translateText('en')">{{ 'ENGLISH' | translate }}</button>
+  </div>
+  <div>
+    <button (click)="translateText('fr')">{{ 'FRENCH' | translate }}</button>
   </div>
 </mat-toolbar>
 
